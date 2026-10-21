@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050611" />
+  <meta name="description" content="A little universe that says hello." />
+  <title>HELLO WORLD — Digital Dreamscape</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div id="boot-screen">
+    <div class="boot-mark">N° 001 — DIGITAL DREAMSCAPE</div>
+    <div class="boot-line"><span id="boot-progress"></span></div>
+    <div id="boot-status">INITIALIZING SPACETIME...</div>
+  </div>
+
+  <canvas id="world"></canvas>
+
+  <div class="scene-overlay" aria-hidden="true">
+    <div class="edge-noise"></div>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+    <div class="film-grain"></div>
+    <div class="rgb-fringe"></div>
+  </div>
+
+  <div class="cursor-core" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"><span></span></div>
+
+  <header class="topbar">
+    <a href="#" class="brand" aria-label="Digital Dreamscape home">
+      <span class="brand-icon">◈</span>
+      <span>VOID<span class="brand-light">/STUDIO</span></span>
+    </a>
+    <div class="top-status">
+      <span class="status-dot"></span>
+      <span>REALITY ENGINE <b>ONLINE</b></span>
+    </div>
+    <button class="sound-toggle glass-button" id="motion-toggle" type="button">
+      <span class="sound-bars"><i></i><i></i><i></i><i></i></span>
+      <span id="motion-label">MOTION: ON</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="coordinates mono">
+        <span>51°30'26.4"N</span>
+        <span>00°07'39.0"W</span>
+        <span class="coordinate-separator">/</span>
+        <span>SIMULATION 001</span>
+      </div>
+
+      <div class="side-label side-left mono">
+        <span>FIG. 001</span>
+        <span class="side-line"></span>
+        <span>AN EXPERIMENT IN EXISTENCE</span>
+      </div>
+
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span>WELCOME TO THE OTHER SIDE</span>
+          <span class="eyebrow-line"></span>
+        </div>
+
+        <div class="title-stage" id="title-stage">
+          <div class="title-shadow" aria-hidden="true">HELLO<br />WORLD<span class="title-period">.</span></div>
+          <h1 class="hero-title" aria-label="Hello World">
+            <span class="title-line" data-text="HELLO">HELLO</span>
+            <span class="title-line title-line-bottom" data-text="WORLD">WORLD<span class="title-period">.</span></span>
+          </h1>
+          <div class="title-reflection" aria-hidden="true">HELLO<br />WORLD.</div>
+          <div class="title-orbit orbit-one" aria-hidden="true"></div>
+          <div class="title-orbit orbit-two" aria-hidden="true"></div>
+          <span class="title-index mono">H<span>01</span></span>
+        </div>
+
+        <p class="hero-description">
+          A small transmission from the edge of
+          <span class="gradient-text">everything.</span>
+          <br />Somewhere between the real and the rendered.
+        </p>
+
+        <div class="hero-actions">
+          <button class="primary-button" id="explore-button" type="button">
+            <span>ENTER THE VOID</span><span class="button-arrow">↗</span>
+          </button>
+          <button class="text-button" id="reality-button" type="button">
+            <span class="play-icon">▷</span> REPLAY REALITY
+          </button>
+        </div>
+      </div>
+
+      <div class="side-label side-right mono">
+        <span>DEPTH: INFINITE</span>
+        <span class="side-line"></span>
+        <span>YOU ARE HERE ↙</span>
+      </div>
+
+      <div class="floating-card glass-panel card-top">
+        <div class="card-heading"><span>ATMOSPHERE</span><span class="card-live">LIVE</span></div>
+        <div class="card-value">∞ <small>DIMENSIONS</small></div>
+        <div class="mini-wave" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="floating-card glass-panel card-bottom">
+        <div class="card-heading"><span>SPACETIME</span><span class="tiny-cross">✳</span></div>
+        <div class="time-value mono" id="clock">00:00:00</div>
+        <div class="card-foot"><span class="status-dot"></span> PRESENT MOMENT DETECTED</div>
+      </div>
+
+      <div class="vertical-readout mono">
+        <span>RENDERED IN REAL TIME</span>
+        <span class="vertical-divider"></span>
+        <span>60 FPS <span class="fps-dot">●</span></span>
+      </div>
+
+      <div class="bottom-center">
+        <div class="scroll-indicator"><span></span></div>
+        <span class="mono">SCROLL TO DESCEND</span>
+      </div>
+
+      <div class="corner-mark corner-tl"></div>
+      <div class="corner-mark corner-tr"></div>
+      <div class="corner-mark corner-bl"></div>
+      <div class="corner-mark corner-br"></div>
+    </section>
+
+    <section class="below-fold" id="about">
+      <div class="section-kicker mono"><span>002</span> / AFTER THE FIRST HELLO</div>
+      <div class="below-grid">
+        <h2>Reality is<br /><span class="gradient-text">a suggestion.</span></h2>
+        <div class="below-copy">
+          <p>Every pixel is a possibility. Every shadow is a little lie. Every interaction is a new universe waiting to happen.</p>
+          <p>This is a tiny experiment in depth, light, and the feeling of being somewhere that doesn't quite exist.</p>
+          <button class="outline-button" id="back-to-top" type="button">RETURN TO ORIGIN ↑</button>
+        </div>
+      </div>
+      <div class="footer-line"><span>VOID/STUDIO © 2026</span><span>MADE OF LIGHT &amp; OTHER THINGS</span><span>END OF TRANSMISSION ◈</span></div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="index.js"></script>
+</body>
+</html>
